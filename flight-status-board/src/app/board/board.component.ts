@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Flight } from '../flight';
 
 @Component({
   selector: 'app-board',
@@ -11,5 +12,8 @@ export class BoardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  @Input() flights: Flight[] = [];
+  @Input() type: string = "";
 
 }

@@ -15,6 +15,9 @@ export class AppComponent {
     allArrivals: Flight[] = [];
     allDepartures: Flight[] = [];
 
+    arrivalText: string = "arrival";
+    departureText: string = "departure";
+
     getFlights(): void {
         fetch("assets/data/flights.json").then((response) => {
             response.json().then((json) => {

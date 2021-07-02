@@ -8,4 +8,12 @@
         <th>Status</th>
     </tr>
     <!-- TODO: Loop through flight objects and display each row with cells corresponding to the header cells above -->
+    <tr *ngFor="let flight of flights">
+        <td>{{flight.airline}}</td>
+        <td class="bold">{{flight.flightNo}}</td>
+        <td class="bold">{{type === "arrival" ? flight.origin : flight.destination}}</td>
+        <td>{{type === "arrival" ? flight.arrival : flight.departure}}</td>
+        <td class="centered">{{flight.gate}}</td>
+        <td class="bold">{{flight.status}}</td>
+    </tr>
 </table>
