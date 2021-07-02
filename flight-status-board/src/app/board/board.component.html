@@ -2,18 +2,18 @@
     <tr>
         <th>Airline</th>
         <th>Flight</th>
-        <th>City</th>
-        <th>Time</th>
+        <th>{{type === "arrival" ? "Origin" : "Destination"}}</th>
+        <th>{{type === "arrival" ? "Arrival" : "Departure"}}</th>
         <th class="centered">Gate</th>
         <th>Status</th>
     </tr>
     <!-- TODO: Loop through flight objects and display each row with cells corresponding to the header cells above -->
     <tr *ngFor="let flight of flights">
-        <td>{{flight.airline}}</td>
+        <td><img [src]="flight.getImage()" width="100px" /></td>
         <td class="bold">{{flight.flightNo}}</td>
         <td class="bold">{{type === "arrival" ? flight.origin : flight.destination}}</td>
         <td>{{type === "arrival" ? flight.arrival : flight.departure}}</td>
         <td class="centered">{{flight.gate}}</td>
-        <td class="bold">{{flight.status}}</td>
+        <td class="bold on-time" [class.delayed]="flight.isDelayed()" [class.cancelled]="flight.isCancelled()">{{flight.status}}</td>
     </tr>
 </table>
