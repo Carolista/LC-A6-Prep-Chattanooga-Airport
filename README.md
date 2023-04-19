@@ -1,5 +1,11 @@
 # GA#6 Prep Exercise - Chattanooga Airport Flight Status Board
 
+Video: https://youtu.be/0ayg6YxQlnA
+
+Students - FORK this (all branches) to your own account and then clone down to your local machine. Use the `main` branch to code along with the video. You can also reference the `solution` branch to study my code.
+
+## Instructions
+
 You are going to create a page with Arrivals and Departures boards that list all the flights scheduled to come and go at the Chattanooga Metropolitan Airport. Users will be able to switch back and forth between the boards and will also be able to filter the lists of flights by airline, flight number, city, or status. You will take advantage of Angular's component-based architecture to set up dynamic functionality on a single-page app. Ready?
 
 
@@ -105,3 +111,7 @@ In `board.component.html`, refactor the header rows for City and Time to be cond
 _That's it!_ Take a look at the final product. 
 
 > **Do a final stage, commit, and push. Great work!**
+
+---
+
+This is part of a [larger group of practice exercises and examples](https://carolista.github.io/student-resources/) for students of LaunchCode's WebDev courses.
